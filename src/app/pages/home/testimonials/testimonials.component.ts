@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, PLATFORM_ID } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { CarouselModule } from 'primeng/carousel';
-import { NgOptimizedImage } from "@angular/common";
+import { isPlatformBrowser, NgOptimizedImage } from "@angular/common";
 
 @Component({
   selector: 'app-testimonials',
@@ -12,7 +12,8 @@ import { NgOptimizedImage } from "@angular/common";
   changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class TestimonialsComponent {
-
+  private platformId = inject(PLATFORM_ID);
+  isBrowser = isPlatformBrowser(this.platformId); 
   testimonials = [
   {
     id:1,

@@ -7,7 +7,8 @@
   </div>
 
   <div class="container">
-    <p-carousel
+    @if (isBrowser) {
+        <p-carousel
       [value]="testimonials"
       [numVisible]="3"
       [numScroll]="1"
@@ -20,9 +21,9 @@
         <div class="testimonial-card shadow-sm rounded-4 p-4">
           <div class="testimonial-content">
             <p class="feedback">
-              <i class="pi pi-quote-left quote-icon"></i>
-              {{ t.feedback | translate }}
-              <i class="pi pi-quote-right quote-icon"></i>
+             <i class="pi pi-comments  quote-icon fs-5 mx-2"></i>
+  <span class="feedback-text">{{ t.feedback | translate }}</span>
+
             </p>
           </div>
           <div class="d-flex align-items-center justify-content-center mt-4">
@@ -42,5 +43,7 @@
         </div>
       </ng-template>
     </p-carousel>
+    }
+  
   </div>
 </section>

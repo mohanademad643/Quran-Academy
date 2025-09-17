@@ -1,4 +1,6 @@
 {
+    "en": "English",
+  "ar": "Arabic",
   "HEADER": {
     "HOME": "Home",
     "ABOUT_US": "About Us",
@@ -257,7 +259,7 @@
       },
       "contact": "Contact Us",
       "address": "123 Islamic Academy Street, City, Country",
-      "phone": "+123 456 789",
+      "phone": "+20 11 41401419",
       "email": "info@academy.com",
       "copy": "Islamic Academy. All Rights Reserved."
     }

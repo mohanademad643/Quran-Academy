@@ -1,6 +1,6 @@
-import { inject, Injectable, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { inject, Injectable, PLATFORM_ID, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { PrimeNGConfig } from 'primeng/api';
 
 export type ILang = 'en' | 'ar';
 
@@ -8,17 +8,19 @@ export type ILang = 'en' | 'ar';
   providedIn: 'root'
 })
 export class LanguageService {
-  private primeNGConfig = inject(PrimeNGConfig);
   private translateService = inject(TranslateService);
   readonly availableLanguages: ILang[] = ['en', 'ar'];
-
+  private platformId = inject(PLATFORM_ID);
   private activeLanguage =signal<ILang>('en');
   currentLanguage = this.activeLanguage.asReadonly();
 
   constructor() {
-    if(localStorage.getItem('IslamicAcademy'))
-      this.activeLanguage.set(localStorage.getItem('IslamicAcademy') as ILang);
-
+        if (isPlatformBrowser(this.platformId)) {
+      const saved = localStorage.getItem('IslamicAcademy') as ILang | null;
+      if (saved) {
+        this.activeLanguage.set(saved);
+      }
+    }
     this.translateService.addLangs(this.availableLanguages);
     this.translateService.setDefaultLang(this.currentLanguage());
   }

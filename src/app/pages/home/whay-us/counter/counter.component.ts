@@ -27,7 +27,8 @@ export class CounterComponent {
   }
 
 
-  private initObserver() {
+private initObserver() {
+  if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
     this.observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -37,11 +38,12 @@ export class CounterComponent {
           }
         });
       },
-      { threshold: 0.4 } 
+      { threshold: 0.4 }
     );
 
     this.observer.observe(this.host.nativeElement);
   }
+}
 
   private startCounterAnimation() {
     this.intervalId = setInterval(() => {

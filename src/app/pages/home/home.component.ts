@@ -43,9 +43,11 @@ export class HomeComponent implements OnInit {
    this.JumpToSection(data);
    });
   }
-   JumpToSection(section:any){
-      document.getElementById(section)?.scrollIntoView({behavior:'smooth'});
-   }
+JumpToSection(section: any) {
+  if (typeof document !== 'undefined' && section) {
+    document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+  }
+}
      @HostListener('window:scroll')
   onScroll() {
     this.router.navigate([], {

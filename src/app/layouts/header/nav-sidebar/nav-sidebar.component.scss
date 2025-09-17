@@ -10,6 +10,9 @@
       .link-list{
       .link-item{
           transition:  background-color 0.2s ease-in-out;
+          a{
+            color: #374151;
+          }
         &:hover{
           background-color: var(--primary-color);
           color: var(--secondary-color);

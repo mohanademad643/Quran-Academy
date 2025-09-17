@@ -1,10 +1,12 @@
-<section class="videos-section py-5  "  >
+<section class="videos-section py-5">
   <div class="container text-center mb-4">
-  <h1 class="section-title">{{ 'home.videoLessons.title' | translate }}</h1>
-  <p class="section-desc">{{ 'home.videoLessons.description' | translate }}</p>
-</div>
-
-  <p-carousel
+    <h1 class="section-title">{{ "home.videoLessons.title" | translate }}</h1>
+    <p class="section-desc">
+      {{ "home.videoLessons.description" | translate }}
+    </p>
+  </div>
+  @if (isBrowser) {
+      <p-carousel
     [value]="videos"
     [numVisible]="3"
     [numScroll]="1"
@@ -19,11 +21,20 @@
     <ng-template let-video pTemplate="item">
       <div class="video-card shadow rounded-4">
         <div class="thumbnail position-relative">
-          <img [ngSrc]="video.thumbnail"     width="300"
-              height="400" [alt]="video.title" loading="lazy" class="img-fluid rounded-top" />
+          <img
+
+            [ngSrc]="video.thumbnail"
+              loading="lazy"
+              width="300"
+              height="400"
+            [alt]="video.title"
+            loading="lazy"
+            class="img-fluid rounded-top"
+          />
           <div class="overlay d-flex flex-column justify-content-end p-3">
             <h5 class="fw-bold text-white mb-1">
-              <i class="pi pi-arrow-right me-2"></i>{{ video.title | translate}}
+              <i class="pi pi-arrow-right me-2"></i
+              >{{ video.title | translate }}
             </h5>
           </div>
           <a [href]="video.url" target="_blank" class="play-btn">
@@ -33,4 +44,6 @@
       </div>
     </ng-template>
   </p-carousel>
+  }
+
 </section>
