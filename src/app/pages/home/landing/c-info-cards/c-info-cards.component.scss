@@ -1,0 +1,39 @@
+:host{
+    background-color: white;
+        max-width: 100%;
+    .child-content {
+  .box-child-content {
+    padding: 1.8rem;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    gap: 0.5rem;
+    background: #fff;
+
+    i {
+        padding: 1rem; 
+        border-radius: 50%;
+        background-color: var(--primary-color);
+      font-size: 2rem;
+      color: var(--secondary-color);
+    }
+
+    h1 {
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      margin: 0.5rem 0;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      background: rgba(247, 183, 49, 0.1);
+    }
+  }
+}
+
+}

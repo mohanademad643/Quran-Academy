@@ -1,0 +1,53 @@
+<main class="top-header container-fluid py-2">
+  <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <section class="d-flex align-items-center gap-3 flex-wrap">
+      <a class="d-flex align-items-center text-white gap-1 small">
+        <i class="pi pi-home"></i>
+        <h1 class="fs-6 m-0 font-normal" >{{'home.Topheader.title' | translate}}</h1>
+      </a>
+      
+      <a href="mailto:info@noorulfurqan.com" class="d-flex align-items-center text-white gap-1 small">
+        <i class="pi pi-envelope"></i>
+        <span>infonoorulfurqan.com</span>
+      </a>
+    </section>
+
+    <section class="d-flex align-items-center gap-3 flex-wrap">
+            <div class="social-links d-flex gap-2">
+        <a href="https://www.youtube.com" target="_blank" class="text-white">
+          <i class="pi pi-youtube"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="text-white">
+          <i class="pi pi-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" class="text-white">
+          <i class="pi pi-twitter"></i>
+        </a>
+      </div>
+
+      <div class="d-flex gap-3 align-items-center">
+        <p-dropdown 
+          [options]="languageService.availableLanguages" 
+          [ngModel]="languageService.currentLanguage()" 
+          (onChange)="onSelectLanguage($event)" 
+          placeholder="Select a Language" 
+          variant="filled">
+
+          <ng-template pTemplate="selectedItem">
+            <div class="d-flex align-items-center gap-2">
+              <img [src]="'flags/'+languageService.currentLanguage()+'.png'" loading="lazy"  class="flag" style="width: 18px" />
+              <div>{{ languageService.currentLanguage() | translate }}</div>
+            </div>
+          </ng-template>
+
+          <ng-template let-lang pTemplate="item">
+            <div class="d-flex align-items-center gap-2">
+              <img [src]="'flags/'+lang+'.png'" loading="lazy" class="flag" style="width: 18px" />
+              <div>{{ lang | translate }}</div>
+            </div>
+          </ng-template>
+        </p-dropdown>
+      </div>
+    </section>
+  </div>
+</main>

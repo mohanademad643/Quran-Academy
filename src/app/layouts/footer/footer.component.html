@@ -1,0 +1,52 @@
+<footer class="academy-footer position-relative">
+  <img
+    src="Services/service-2.avif"
+    alt="Academy Footer Background"
+    class="footer-bg-img"
+    loading="lazy"
+  />
+  <div class="overlay"></div>
+
+  <div class="container py-5 text-white position-relative wow fadeInUp" data-wow-delay=".3s">
+    <div class="row g-4">
+      <div class="col-md-4 text-center text-md-start ">
+        <img src="logo.avif" alt="Academy Logo" class="footer-logo mb-3" />
+        <p>
+          {{ 'home.footer.aboutText' | translate }}
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h1 class="footer-title">{{ 'home.footer.quickLinks' | translate }}</h1>
+        <ul class="list-unstyled footer-links">
+          @for (link of items; track $index) {
+          <li [routerLink]="link.routerLink" [fragment]="link.fragment">
+            <a class="cursor-pointer">{{ link.label | translate }}</a>
+          </li>
+          }
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h1 class="footer-title">{{ 'home.footer.contact' | translate }}</h1>
+        <ul class="list-unstyled footer-contact">
+          <li><i class="pi pi-map-marker"></i> {{ 'home.footer.address' | translate }}</li>
+          <li><i class="pi pi-phone"></i><a class=" fw-normal" [href]="'tel:'+('home.footer.phone' | translate )"> {{ 'home.footer.phone' | translate }}</a></li>
+          <li><i class="pi pi-envelope"></i> {{ 'home.footer.email' | translate }}</li>
+        </ul>
+
+        <div class="social-links mt-3">
+          @for (item of socialLinks; track $index) {
+          <a [href]="item.url" target="_blank" class="social-icon me-2">
+            <i [class]="item.icon"></i>
+          </a>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4 pt-3 border-top border-light">
+      &copy; {{ currentYear }} {{ 'home.footer.copy' | translate }}
+    </div>
+  </div>
+</footer>

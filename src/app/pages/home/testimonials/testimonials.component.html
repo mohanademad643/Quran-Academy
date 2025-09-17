@@ -1,0 +1,46 @@
+<section class="testimonials-section py-5" >
+  <div class="container text-center mb-5">
+    <h1 class="section-title">{{ "home.testimonials.sectionTitle" | translate }}</h1>
+    <p class="section-desc">
+      {{ "home.testimonials.sectionDesc" | translate }}
+    </p>
+  </div>
+
+  <div class="container">
+    <p-carousel
+      [value]="testimonials"
+      [numVisible]="3"
+      [numScroll]="1"
+      [circular]="true"
+      [autoplayInterval]="5000"
+      [responsiveOptions]="responsiveOptions"
+      class="testimonial-carousel"
+    >
+      <ng-template let-t pTemplate="item">
+        <div class="testimonial-card shadow-sm rounded-4 p-4">
+          <div class="testimonial-content">
+            <p class="feedback">
+              <i class="pi pi-quote-left quote-icon"></i>
+              {{ t.feedback | translate }}
+              <i class="pi pi-quote-right quote-icon"></i>
+            </p>
+          </div>
+          <div class="d-flex align-items-center justify-content-center mt-4">
+            <img
+              [ngSrc]="t.image"
+              [alt]="t.name"
+              loading="lazy"
+              width="300"
+              height="400"
+              class="testimonial-img rounded-circle"
+            />
+            <div class="ms-3 text-start">
+              <h6 class="mb-0 fw-bold">{{ t.name | translate }}</h6>
+              <small class="text-muted">{{ t.role | translate }}</small>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</section>

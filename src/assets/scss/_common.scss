@@ -1,0 +1,47 @@
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      margin: 1rem 0;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--primary-color);
+      background-color: var(--primary-color);
+      color: white;
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 1.2rem;
+        color: var(--secondary-color);
+      }
+
+      &:hover {
+        background-color: #fff;
+        color: #2b0633;
+        box-shadow: 0 0 12px rgba(247, 183, 49, 0.6);
+      }
+
+      &:active {
+        transform: scale(0.97);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(247, 183, 49, 0.4);
+      }
+    }
+
+
+.container-style {
+  max-width: 100%;
+  margin:  0 2rem;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none !important;
+}

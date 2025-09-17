@@ -1,0 +1,36 @@
+<section class="videos-section py-5  "  >
+  <div class="container text-center mb-4">
+  <h1 class="section-title">{{ 'home.videoLessons.title' | translate }}</h1>
+  <p class="section-desc">{{ 'home.videoLessons.description' | translate }}</p>
+</div>
+
+  <p-carousel
+    [value]="videos"
+    [numVisible]="3"
+    [numScroll]="1"
+    [circular]="true"
+    [showIndicators]="true"
+    [responsiveOptions]="[
+      { breakpoint: '1200px', numVisible: 2, numScroll: 1 },
+      { breakpoint: '768px', numVisible: 1, numScroll: 1 }
+    ]"
+    class="video-carousel"
+  >
+    <ng-template let-video pTemplate="item">
+      <div class="video-card shadow rounded-4">
+        <div class="thumbnail position-relative">
+          <img [ngSrc]="video.thumbnail"     width="300"
+              height="400" [alt]="video.title" loading="lazy" class="img-fluid rounded-top" />
+          <div class="overlay d-flex flex-column justify-content-end p-3">
+            <h5 class="fw-bold text-white mb-1">
+              <i class="pi pi-arrow-right me-2"></i>{{ video.title | translate}}
+            </h5>
+          </div>
+          <a [href]="video.url" target="_blank" class="play-btn">
+            <i class="pi pi-play text-white"></i>
+          </a>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</section>

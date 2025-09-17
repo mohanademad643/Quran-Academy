@@ -1,0 +1,79 @@
+:host {
+
+  .packages-section {
+      background: white;
+
+    .section-title {
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    .section-desc {
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .package-card {
+      background: #fff;
+      border: 1px solid #ccc;
+      transition: all 0.3s ease;
+      text-align: center;
+      overflow: hidden;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        border-color: var(--secondary-color);
+        box-shadow: 0 0 20px rgba(247, 183, 49, 0.5);
+
+        .package-title {
+          color: var(--secondary-color);
+        }
+        .cta-btn {
+          background: var(--secondary-color);
+          border: 1px solid var(--secondary-color);
+          &:hover{
+            background-color: white;
+          }
+          i{
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      .package-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+
+      .price {
+        .amount {
+          font-size: 2rem;
+          font-weight: bold;
+          color: var(--primary-color);
+        }
+        .per {
+          font-size: 0.9rem;
+          color: #777;
+        }
+      }
+
+      ul {
+        li {
+          font-size: 0.95rem;
+          margin: 8px 0;
+          color: #555;
+
+          i {
+            margin-right: 8px;
+            color: var(--primary-color);
+          }
+        }
+      }
+
+  
+
+    }
+  }
+}

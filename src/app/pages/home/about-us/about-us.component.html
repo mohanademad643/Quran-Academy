@@ -1,0 +1,73 @@
+<section class="about-section container py-5">
+  <div class="container content-section row align-items-center">
+    <div
+      class="infor-section col-lg-6 order-2 order-lg-1 mt-3 wow fadeInLeft"
+      data-wow-delay=".3s"
+    >
+      <figure class="wow fadeInUp" data-wow-delay=".3s">
+        <img src="cover.avif" alt="image-cover" class="bg-image" />
+      </figure>
+
+      <article>
+        <small
+          class="section-label d-flex align-items-center gap-3 text-uppercase fw-bold"
+        >
+          <span></span>
+          {{ aboutData.label | translate }}
+        </small>
+      </article>
+      <h1 class="section-title fw-bold my-3">
+        {{ aboutData.title | translate }}
+      </h1>
+
+      @for (item of aboutData.paragraphs; track $index) {
+      <p class="section-text mb-3">
+        {{ item | translate }}
+      </p>
+      }
+
+      <button
+        dir="ltr"
+        class="cta-btn"
+        icon="pi pi-arrow-up-right"
+        iconPos="right"
+      >
+        <i class="pi pi-arrow-up-right"></i>
+        <span> {{ aboutData.buttonText | translate }}</span>
+      </button>
+    </div>
+    <div
+      class="col-lg-6 text-center position-relative order-1 order-lg-2 wow fadeInRight"
+      data-wow-delay=".4s"
+    >
+      <img
+        [src]="aboutData.image"
+        width="300" height="400" 
+        alt="Quran Academy"
+        class="img-fluid main-img"
+      />
+      <button class="play-btn" (click)="display.set(true)">
+        <i class="pi pi-play"></i>
+      </button>
+      <img [src]="aboutData.smallImage" alt="Quran Student" class="small-img" />
+    </div>
+  </div>
+</section>
+<p-dialog
+  [(visible)]="display"
+  [modal]="true"
+  [style]="{ width: '50vw' }"
+>
+<div class="hero-bg">
+      <video controls autoplay loop class=" w-100 h-100">
+        <source src="landing.mp4" type="video/mp4" />
+      </video>
+  </div>
+  <!-- <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/zpOULjyy-n8"
+    frameborder="0"
+    allowfullscreen
+  ></iframe> -->
+</p-dialog>

@@ -1,0 +1,4 @@
+
+  <app-header [dir]="languageService.currentLanguage() === 'ar' ? 'rtl' : 'ltr'" />
+<router-outlet />
+  <app-footer [dir]="languageService.currentLanguage() === 'ar' ? 'rtl' : 'ltr'" />

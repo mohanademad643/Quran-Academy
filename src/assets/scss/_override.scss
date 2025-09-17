@@ -1,0 +1,26 @@
+
+
+.p-button {
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 10px;
+}
+
+.p-button:hover {
+  background-color: #330a3b;
+}
+
+.p-button.p-disabled {
+  background-color: grey;
+  opacity: 0.7;
+}
+
+  
+  .p-overlaypanel > div {
+    padding: 0;
+  }
+
+
+
+

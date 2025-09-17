@@ -1,0 +1,43 @@
+<main class="why-choose-us py-5">
+  <div class="container">
+    <section class="image-container row align-items-center">
+      <figure class="image-box col-md-6 mb-4 mb-md-0 px-4 ">
+        <img
+          ngSrc="whay-Us.avif"
+          alt="Educational Environment"
+          class="img-fluid shadow"
+  width="600"
+  height="300"
+  priority
+        />
+      </figure>
+
+      <article class="col-md-6 info-section">
+        <figure>
+            <img ngSrc="cover.avif" width="300" height="400" loading="lazy" alt="image-cover" class="bg-image">
+        </figure>
+
+
+        <h1 class="section-label" >{{ "home.WhayUs.whyChooseUshead.label" | translate }}</h1>
+        <h2 class="section-title">{{ "home.WhayUs.whyChooseUshead.title" | translate }}</h2>
+        <p class="section-desc" >{{ "home.WhayUs.whyChooseUshead.description" | translate }}</p>
+        <div class="row g-4">
+          @for (feature of features; track $index) {
+          <div class="col-12 col-sm-6 " >
+            <div class="feature-item d-flex">
+              <div class="icon-box d-flex align-items-center justify-content-center fs-6 ">
+                <i [class]="feature.icon"></i>
+              </div>
+              <div class="ms-3">
+                <h1>{{ feature.title | translate }}</h1>
+                <p>{{ feature.description | translate }}</p>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </article>
+    </section>
+  </div>
+ <app-counter></app-counter>
+</main>

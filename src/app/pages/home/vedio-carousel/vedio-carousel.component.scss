@@ -1,0 +1,80 @@
+:host {
+  .videos-section {
+    background: #f9f9f9;
+
+    .section-title {
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-desc {
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+ 
+    .video-card {
+      background: #fff;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .thumbnail {
+        position: relative;
+
+        img {
+          width: 100%;
+          border-radius: 1rem 1rem 0 0;
+          display: block;
+        }
+
+        .overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+        to top,
+        rgba(59, 10, 69, 0.85) 0%,
+        rgba(59, 10, 69, 0.6) 40%,
+        rgba(59, 10, 69, 0.2) 70%,
+        rgba(59, 10, 69, 0) 100%
+      );
+          border-radius: 1rem 1rem 0 0;
+
+          h5 {
+            font-size: 1rem;
+          }
+        }
+
+        .play-btn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: var(--primary-color);
+          color: var(--secondary-color);
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          transition: all 0.3s ease;
+          z-index: 2;
+
+          &:hover {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+}

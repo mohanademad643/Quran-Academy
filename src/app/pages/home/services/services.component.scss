@@ -1,0 +1,145 @@
+@use '../../../../assets/scss/mixins' as main;
+
+:host {
+  .services-section {
+    position: relative;
+    z-index: 1;
+    background-color: var(--primary-color);
+
+
+    .cover-image {
+      @include main.image-cover-Style;
+    }
+
+    .overlay-cover {
+      @include main.overlay-cover-Style;
+    }
+
+    .section-title {
+      color: var(--secondary-color);
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      min-height: 320px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .index-card {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 1.2rem;
+        color: #fff;
+        background-color: var(--primary-color);
+        padding: 15px 15px;
+        font-weight: 600;
+        border-top-right-radius: 2.75rem;
+        border-bottom-left-radius: 0.75rem;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+        letter-spacing: 0.5px;
+      }
+
+
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .service-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+        width: 65%;
+        height: 65%;
+        z-index: 0;
+      }
+
+      .service-icon {
+        z-index: 1;
+        background: var(--primary-color);
+        color: var(--secondary-color);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        margin: 2rem 0 1rem 0;
+
+        i {
+          font-size: 1.6rem;
+        }
+      }
+
+      .service-body {
+        padding: 1.2rem;
+
+        h1 {
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 0.95rem;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    // ✅ PrimeNG paginator custom style
+    ::ng-deep .p-paginator {
+      .p-paginator-pages .p-paginator-page {
+        border: none; // remove default border
+        border-radius: 50%; // make circular
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        text-align: center;
+        margin: 0 0.25rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: var(--primary-color);
+          color: #fff;
+          transform: scale(1.05); // small zoom on hover
+        }
+
+        &.p-highlight {
+          background: var(--primary-color);
+          color: var(--secondary-color);
+          font-weight: bold;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); // soft shadow
+        }
+      }
+
+      .p-paginator-first,
+      .p-paginator-prev,
+      .p-paginator-next,
+      .p-paginator-last {
+        border: none;
+        background: white;
+        height: 40px;
+        width: 40px;
+        color: var(--text-color);
+        border-radius: 50%;
+        transition: background 0.3s ease;
+        &:hover {
+          background: var(--secondary-color);
+          color: var(--primary-color);
+        }
+      }
+    }
+
+  }
+}

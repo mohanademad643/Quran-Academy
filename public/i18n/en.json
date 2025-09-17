@@ -1,0 +1,265 @@
+{
+  "HEADER": {
+    "HOME": "Home",
+    "ABOUT_US": "About Us",
+    "SERVICES": "Our Services",
+    "WHY_US": "Why Us",
+    "PACKAGES": "Packages",
+    "CONTACT_US": "Contact Us",
+    "WhayUs":"Why  Us"
+  },
+  "home": {
+    "Topheader":{
+      "title":"Noorulfurqan Academy"
+
+    },
+    "landing": {
+      "title": "Noorulfurqan Academy... Invest In Your Kids' True Future Now",
+      "description": "Discover a unique experience to learn and memorize the Holy Quran with ease and mastery. At Noorulfurqan Academy, we strive to convey the teachings of the Quran to every heart seeking knowledge. Learning is not just a goal, but a spiritual journey full of contemplation and reflection.",
+      "cta": "Contact us and book now"
+    },
+    "childContent": {
+      "Cart_1": {
+        "icon": "pi pi-gift",
+        "text": "2 Free Sessions",
+        "description": "Get started with two free sessions to experience our classes."
+      },
+      "Cart_2": {
+        "icon": "pi pi-book",
+        "text": "One-on-one Classes",
+        "description": "Personalized lessons tailored to your child’s pace and needs."
+      },
+      "Cart_3": {
+        "icon": "pi pi-user",
+        "text": "Special Section for Women",
+        "description": "A safe and dedicated section for women learners."
+      },
+      "Cart_4": {
+        "icon": "pi pi-clock",
+        "text": "Convenient Times",
+        "description": "Flexible class schedules to fit your busy life."
+      }
+    },
+    "contactUs": {
+      "title": "Get in Touch",
+      "description": "We are pleased and honored to communicate with you",
+      "form": {
+        "name": "Name",
+        "phone": "Phone Number",
+        "email": "Email",
+        "age": "Age",
+        "preferredDay": "Choose Your Preferred Day for a Free Trial",
+        "preferredTime": "Enter Your Preferred Time",
+        "teacherGender": "Teacher Gender",
+        "male": "Male",
+        "female": "Female",
+        "submit": "Submit"
+      },
+      "days": {
+        "saturday": "Saturday",
+        "sunday": "Sunday",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday"
+      },
+      "info": {
+        "phone": "Phone Number",
+        "email": "Email",
+        "youtube": "youtube"
+      }
+    },
+    "aboutUs": {
+      "label": "ABOUT US",
+      "title": "Best Online Quran Academy",
+      "paragraph1": "Noorulfurqan Academy is an educational platform specialized in teaching the Holy Quran and understanding its meanings in an innovative and simplified way that suits everyone.",
+      "paragraph2": "The academy was established 5 years ago, and we succeeded in attracting 70% of our students through personal lessons that have evolved to provide integrated educational services via the Internet.",
+      "paragraph3": "We rely on the TeacherOn platform, Facebook ads, and personal recommendations in our communication with customers, and we provide a distinguished educational experience through groups dedicated to each student to provide daily support, performance reports, and all educational resources.",
+      "paragraph4": "We aim to attract students through introductory videos and customer experiences, in addition to free lectures during religious occasions.",
+      "paragraph5": "Despite the challenges of competing with traditional academies, we are committed to our mission of spreading the teachings of the Holy Quran to everyone who aspires to learn it, while taking into account the financial circumstances of our customers and providing a high-quality educational experience.",
+      "paragraph6": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "buttonText": "Book your first free session now"
+    },
+    "services": {
+      "servicesSection": {
+        "title": "Our Services",
+        "subtitle": "Learn, recite, and live the Quran and Islamic knowledge beautifully"
+      },
+      "service1": {
+        "title": "Memorizing the Quran",
+        "description": "Learn and memorize the Quran easily, focusing on correct pronunciation, establishing your letter articulation and correct reading."
+      },
+      "service2": {
+        "title": "Improving Recitation",
+        "description": "Regular listening and review sessions to enhance memorization and improve recitation. We help memorizers and readers review their recitation accurately, while alerting them to errors."
+      },
+      "service3": {
+        "title": "Teaching Tajweed and Qira’at",
+        "description": "We focus on enabling the student to read the Qur’an with all the rules of Tajweed in a perfect manner."
+      },
+      "service4": {
+        "title": "Teaching Arabic Language",
+        "description": "Distinguished education for children and adults in Arabic basics with training in reading and writing."
+      },
+      "service5": {
+        "title": "Giving Briefings and Certificates",
+        "description": "Qualified teachers and supervisors provide the best education and modern scientific knowledge."
+      },
+      "service6": {
+        "title": "Unlimited Scheduling",
+        "description": "We provide male and female teachers around the clock to assist students in memorizing and learning."
+      },
+      "service7": {
+        "title": "Islamic Studies",
+        "description": "Explore Islamic sciences including jurisprudence and the Prophet’s biography."
+      },
+      "service8": {
+        "title": "Aqeedah",
+        "description": "Learn the fundamentals of Islamic belief in a simplified way to strengthen your faith."
+      },
+      "service9": {
+        "title": "Prayer Education",
+        "description": "Master prayer performance step by step to enhance your connection with Allah."
+      }
+    },
+    "WhayUs": {
+      "whyChooseUshead": {
+        "label": "Why Choose Us",
+        "title": "We Always Try To Present Our Academy In The Best Way",
+        "description": "We strive to provide a unique educational experience that combines authenticity with modern teaching methods."
+      },
+      "feature1": {
+        "title": "Comprehensive educational curriculum",
+        "description": "Thoughtful plans suitable for all levels from beginners to advanced."
+      },
+      "feature2": {
+        "title": "Interactive lessons",
+        "description": "Live educational sessions with specialized teachers to ensure deep and smooth understanding."
+      },
+      "feature3": {
+        "title": "Continuous communication and support",
+        "description": "A support team is available daily to provide assistance and answer all your inquiries."
+      },
+      "feature4": {
+        "title": "Periodic performance reports",
+        "description": "Accurate monitoring of your progress through daily reports that help you improve your level."
+      },
+      "feature5": {
+        "title": "Flexibility in learning",
+        "description": "Lessons that fit your daily schedule and allow you to learn from anywhere in the world."
+      },
+      "feature6": {
+        "title": "Free lectures",
+        "description": "Distinctive educational events during religious occasions to enhance students’ spirituality."
+      },
+      "feature7": {
+        "title": "A stimulating educational environment",
+        "description": "Private groups for each student to provide personal support and enhance interaction."
+      },
+      "feature8": {
+        "title": "Accredited certificates",
+        "description": "After completing the educational programs, you will receive a certificate that reflects your achievements."
+      },
+      "counters": {
+        "counter1": {
+          "label": "Teachers"
+        },
+        "counter2": {
+          "label": "Number of al iijazat"
+        },
+        "counter3": {
+          "label": "Students"
+        },
+        "counter4": {
+          "label": "Number of Sessions"
+        }
+      }
+    },
+    "videoLessons": {
+      "title": "Our Islamic Video Lessons",
+      "description": "Enrich your knowledge with our Quran and Islamic studies video library.",
+      "videos": {
+        "learnQuran": "Learn Quran with Tajweed",
+        "islamicHistory": "Islamic History Lecture",
+        "arabicBasics": "Arabic Language Basics",
+        "memorization": "Memorization Techniques"
+      }
+    },
+    "packages": {
+      "sectionTitle": "Our Packages",
+      "sectionDesc": "Choose the package that fits your needs and start your journey today.",
+      "per": "/ month",
+      "cta": "Order Package Now",
+      "silver": {
+        "name": "Silver Package",
+        "duration": "4 hours",
+        "classes": "8 classes per month",
+        "perClass": "30 minutes per class"
+      },
+      "golden": {
+        "name": "Golden Package",
+        "duration": "6 hours",
+        "classes": "12 classes per month",
+        "perClass": "30 minutes per class"
+      },
+      "heroes": {
+        "name": "Heroes Package",
+        "duration": "8 hours",
+        "classes": "16 classes per month",
+        "perClass": "30 minutes per class"
+      },
+      "family": {
+        "name": "Family Package",
+        "duration": "12 hours",
+        "classes": "24 classes per month",
+        "perClass": "30 minutes per class"
+      },
+      "diamond": {
+        "name": "Diamond Package",
+        "duration": "16 hours",
+        "classes": "30 lessons per month",
+        "perClass": "30 minutes per lesson"
+      }
+    },
+    "testimonials": {
+      "sectionTitle": "What Our Students Say",
+      "sectionDesc": "Hear inspiring stories from our beloved students and parents about their journey with us.",
+      "ahmed": {
+        "name": "Ahmed Ali",
+        "role": "Student",
+        "feedback": "This academy transformed my Quran learning journey. The teachers are professional and very supportive."
+      },
+      "fatima": {
+        "name": "Fatima Noor",
+        "role": "Parent",
+        "feedback": "My children are enjoying the classes. Flexible schedules and wonderful teaching methods!"
+      },
+      "mohammed": {
+        "name": "Mohammed Hassan",
+        "role": "Student",
+        "feedback": "Highly recommend! The interactive lessons helped me improve quickly and stay motivated."
+      },
+      "layla": {
+        "name": "Layla Ibrahim",
+        "role": "Student",
+        "feedback": "The best experience I had learning Quran online. Thank you for making it so easy and enjoyable!"
+      }
+    },
+    "footer": {
+      "aboutText": "Empowering your Islamic knowledge with authentic Quranic and religious studies courses online and offline.",
+      "quickLinks": "Quick Links",
+      "links": {
+        "Home": "Home",
+        "About Us": "About Us",
+        "Courses": "Courses",
+        "Contact": "Contact",
+        "Blog": "Blog"
+      },
+      "contact": "Contact Us",
+      "address": "123 Islamic Academy Street, City, Country",
+      "phone": "+123 456 789",
+      "email": "info@academy.com",
+      "copy": "Islamic Academy. All Rights Reserved."
+    }
+  }
+}

@@ -1,0 +1,77 @@
+
+@use '../../../assets/scss/mixins' as main;
+.academy-footer {
+  position: relative;
+  overflow: hidden;
+
+  .footer-bg-img {
+     @include main.image-cover-Style;
+  }
+
+  .overlay {
+       @include main.overlay-cover-Style;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer-logo {
+    width: 120px;
+  }
+
+  .footer-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+
+  .footer-links,
+  .footer-contact {
+    li {
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      i {
+        font-size: 1.2rem;
+        color: var(--secondary-color);
+      }
+
+      a {
+        color: #fff !important;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+          color: var(--secondary-color);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .social-links {
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      border-radius: 50%;
+      font-size: 1.2rem;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+}

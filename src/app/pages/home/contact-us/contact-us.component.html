@@ -1,0 +1,172 @@
+<section class="contact-us py-3 bg-white">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <form
+          [formGroup]="contactForm"
+          (ngSubmit)="submitForm()"
+          class="contact-form p-4"
+        >
+          <h1 class="form-title mb-3">
+            {{ "home.contactUs.title" | translate }}
+          </h1>
+
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="{{ 'home.contactUs.form.name' | translate }}"
+              formControlName="name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="{{ 'home.contactUs.form.phone' | translate }}"
+              formControlName="phone"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="{{ 'home.contactUs.form.email' | translate }}"
+              formControlName="email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="{{ 'home.contactUs.form.age' | translate }}"
+              formControlName="age"
+            />
+          </div>
+
+          <div class="mb-3 w-100">
+            <p-dropdown
+              [options]="[
+                {
+                  label: 'home.contactUs.days.saturday' | translate,
+                  value: 'home.contactUs.days.saturday' | translate
+                },
+                {
+                  label: 'home.contactUs.days.sunday' | translate,
+                  value: 'home.contactUs.days.sunday' | translate
+                },
+                {
+                  label: 'home.contactUs.days.monday' | translate,
+                  value: 'home.contactUs.days.monday' | translate
+                },
+                {
+                  label: 'home.contactUs.days.tuesday' | translate,
+                  value: 'home.contactUs.days.tuesday' | translate
+                },
+                {
+                  label: 'home.contactUs.days.wednesday' | translate,
+                  value: 'home.contactUs.days.wednesday' | translate
+                },
+                {
+                  label: 'home.contactUs.days.thursday' | translate,
+                  value: 'home.contactUs.days.thursday' | translate
+                }
+              ]"
+              optionLabel="label"
+              placeholder="{{ 'home.contactUs.form.preferredDay' | translate }}"
+              formControlName="preferredDay"
+            >
+            </p-dropdown>
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="time"
+              class="form-control"
+              placeholder="{{
+                'home.contactUs.form.preferredTime' | translate
+              }}"
+              formControlName="preferredTime"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="d-block mb-1">{{
+              "home.contactUs.form.teacherGender" | translate
+            }}</label>
+            <div class="d-flex gap-3">
+              @for (item of genderOptions; track $index) {
+              <div>
+                <div class="flex items-center gap-2">
+                  <p-checkbox
+                    formControlName="teacherGender"
+                    [value]="item.value | translate"
+                  >
+                  </p-checkbox>
+                  <label>{{ item.name | translate }}</label>
+                </div>
+              </div>
+              }
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            pButton
+            label="{{ 'home.contactUs.form.submit' | translate }}"
+            class="btn-primary w-100 mt-3"
+          ></button>
+        </form>
+      </div>
+
+      <!-- RIGHT SIDE: CONTACT INFO -->
+      <div
+        class="right-content col-lg-6 shadow-lg text-center text-lg-start wow fadeInUp"
+        data-wow-delay=".6s"
+      >
+        <div
+          class="contact-info d-flex justify-content-center align-items-center flex-column p-4 h-100"
+        >
+          <h1 class="mb-3 text-light">
+            {{ "home.contactUs.description" | translate }}
+          </h1>
+          <img
+            src="logo.avif"
+            alt="Academy Logo"
+            class="mb-3"
+            loading="lazy"
+            style="width: 120px"
+          />
+          <div class="info-box container-fluid">
+            <div class="info-item flex-fill">
+              <i class="pi pi-phone"></i>
+              <div>
+                <h1>{{ "home.contactUs.info.phone" | translate }}</h1>
+                <span>+1 234 567 890</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="pi pi-envelope"></i>
+              <div>
+                <h1>{{ "home.contactUs.info.email" | translate }}</h1>
+                <span>infonoorulfurqan.com</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="pi pi-youtube"></i>
+              <div>
+                <h1>{{ "home.contactUs.info.youtube" | translate }}</h1>
+                <span>www.youtube.islamic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

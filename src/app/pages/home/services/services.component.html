@@ -1,0 +1,43 @@
+<main class="services-section py-5"  >
+ <img class="cover-image" src="Services/service-4.avif" alt="service_image-logo" />
+  <div class="overlay-cover"></div>
+    <div class="container ">
+    <section class="row text-center mb-4">
+      <div class="col">
+        <h1 class="fw-bold section-title">{{'home.services.servicesSection.title' | translate}}</h1>
+      <p class="text-white fs-6 fw-light text-center mx-auto w-75 lh-lg">
+{{'home.services.servicesSection.subtitle' | translate}}
+</p>
+
+      </div>
+    </section>
+    <section class="row g-4 justify-content-center ">
+      @for (service of paginatedServices; track $index) {
+      <div class="col-md-6 col-lg-4 " >
+        <div class="service-card shadow-lg rounded-4 position-relative">
+          
+          <img [src]="service.image" [alt]="service.title" class="service-img" />
+
+          <div class="service-icon">
+            <i [class]="service.icon"></i>
+          </div>
+          <div class="service-body p-4 text-center">
+            <h1 class="fw-bold mb-2 fs-6 ">{{ service.title | translate}}</h1>
+            <p class="text-muted">{{ service.description | translate}}</p>
+          </div>
+            <span class=" index-card" >{{service.id }}</span>
+        </div>
+      
+      </div>
+      }
+    </section>
+    <section class="d-flex justify-content-center mt-4">
+      <p-paginator
+        [rows]="3"
+        [totalRecords]="services.length"
+        (onPageChange)="onPageChange($event)"
+          [showFirstLastIcon]="false"
+      ></p-paginator>
+    </section>
+  </div>
+</main>
