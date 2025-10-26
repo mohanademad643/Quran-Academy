@@ -1,0 +1,91 @@
+<!-- <div class="container-fluid py-5">
+  <div class="row g-2">
+    @for (image of images; let i = $index; track image.src) {
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card gallery-card shadow-sm" (click)="openGallery(i)">
+          <img [src]="image.src" [alt]="image.title" class="img-fluid rounded" />
+        </div>
+      </div>
+    }
+  </div>
+</div> -->
+<section class="videos-section py-5">
+  <div class="container text-center mb-4">
+    <h1 class="section-title">Arabic Language Course Gallery</h1>
+    <p class="section-desc">
+    Enroll now and start your journey with Sujood Academy!
+    </p>
+  </div>
+
+  @if (isBrowser) {
+  <p-carousel
+    [value]="images"
+    [numVisible]="3"
+    [numScroll]="1"
+    [circular]="true"
+    [showIndicators]="true"
+    [responsiveOptions]="responsiveOptions"
+    class="video-carousel"
+  >
+    <ng-template pTemplate="item" let-video let-i="index">
+      <div class="video-card shadow rounded-4">
+        <div class="thumbnail position-relative">
+          <img
+            [src]="video.src"
+            [alt]="video.title | translate"
+            class="img-fluid rounded-top"
+          />
+          <div class="overlay"></div>
+          <div class="play-btn cursor-pointer" (click)="openGallery(video.id)">
+            <i class="pi pi-search-plus text-white"></i>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+  }
+</section>
+
+<!-- PrimeNG fullscreen popup viewer -->
+@if(isBrowser && images.length){
+<p-galleria
+  [(visible)]="displayBasic"
+  [value]="images"
+  [(activeIndex)]="activeIndex"
+  [responsiveOptions]="[
+    {
+      breakpoint: '1500px',
+      numVisible: 5
+    },
+    {
+      breakpoint: '1024px',
+      numVisible: 3
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 2
+    },
+    {
+      breakpoint: '560px',
+      numVisible: 1
+    }
+  ]"
+  [numVisible]="7"
+  [showItemNavigators]="true"
+  [showThumbnails]="false"
+  [circular]="true"
+  [fullScreen]="true"
+  [showIndicators]="true"
+  [containerStyle]="{ 'max-width': '850px' }"
+>
+  <ng-template pTemplate="item" let-item>
+    @if ( item?.src) {
+    <img
+      [src]="item.src"
+      [alt]="item.title | translate"
+      class="img-fluid rounded shadow"
+    />
+    }
+  </ng-template>
+</p-galleria>
+}

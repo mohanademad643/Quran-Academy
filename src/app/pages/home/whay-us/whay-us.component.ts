@@ -5,7 +5,7 @@ import { NgOptimizedImage } from "@angular/common";
 @Component({
   selector: 'app-whay-us',
   standalone: true,
-  imports: [TranslateModule, CounterComponent, NgOptimizedImage],
+  imports: [TranslateModule, CounterComponent],
   templateUrl: './whay-us.component.html',
   styleUrls: ['./whay-us.component.scss'],
   changeDetection:ChangeDetectionStrategy.OnPush

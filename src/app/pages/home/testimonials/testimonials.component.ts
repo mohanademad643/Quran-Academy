@@ -6,7 +6,7 @@ import { isPlatformBrowser, NgOptimizedImage } from "@angular/common";
 @Component({
   selector: 'app-testimonials',
   standalone:true,
-  imports: [CarouselModule, TranslateModule, NgOptimizedImage],
+  imports: [CarouselModule, TranslateModule],
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.scss',
   changeDetection:ChangeDetectionStrategy.OnPush

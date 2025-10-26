@@ -11,6 +11,7 @@ import { TestimonialsComponent } from "./testimonials/testimonials.component";
 import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { LanguageService } from '../../core/language/language.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { GalleryComponent } from "./gallery/gallery.component";
 
 
 @Component({
@@ -25,7 +26,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     VedioCarouselComponent,
     PackagesComponent,
     TestimonialsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    GalleryComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

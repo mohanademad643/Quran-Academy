@@ -7,7 +7,7 @@ import { PLATFORM_ID } from '@angular/core';
 @Component({
   selector: 'app-vedio-carousel',
   standalone: true,
-  imports: [CarouselModule, TranslateModule, NgOptimizedImage],
+  imports: [CarouselModule, TranslateModule],
   templateUrl: './vedio-carousel.component.html',
   styleUrl: './vedio-carousel.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

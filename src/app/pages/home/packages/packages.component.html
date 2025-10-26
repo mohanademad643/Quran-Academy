@@ -1,34 +1,46 @@
 <section class="packages-section py-5">
-<div class="container text-center mb-5">
-  <h1 class="section-title">{{ 'home.packages.sectionTitle' | translate }}</h1>
-  <p class="section-desc">
-    {{ 'home.packages.sectionDesc' | translate }}
-  </p>
-</div>
+  <div class="container text-center mb-5">
+    <h1 class="section-title">
+      {{ "home.packages.sectionTitle" | translate }}
+    </h1>
+    <p class="section-desc">
+      {{ "home.packages.sectionDesc" | translate }}
+    </p>
+  </div>
 
   <div class="container">
     <div class="row g-4">
       @for (pkg of packages; track $index) {
-        <div class="col-12 col-md-6 col-lg-4 ">
-          <div class="package-card shadow-1 rounded-4 p-4"
-            [class.highlight]="pkg.highlight">
-            <h4 class="package-title">{{ pkg.name |translate}}</h4>
-            <div class="price my-3">
-              <span class="amount">{{ pkg.price | currency }}</span>
-              <span class="per">{{ 'home.packages.per' | translate }}</span>
-            </div>
-            <ul class="list-unstyled mb-4">
-              <li><i class="pi pi-clock"></i> {{ pkg.duration | translate }}</li>
-              <li><i class="pi pi-book"></i> {{ pkg.classes | translate}}</li>
-              <li><i class="pi pi-check-circle"></i> {{ pkg.perClass | translate}}</li>
-            </ul>
-           
-    <button dir="ltr" class="cta-btn">
-      <i class="pi pi-arrow-up-right"></i>
-        <span>{{ 'home.packages.cta' | translate }}</span>
-    </button>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div
+          class="package-card shadow-1 rounded-4 p-4"
+          [class.highlight]="pkg.highlight"
+        >
+          <h4 class="package-title">{{ pkg.name | translate }}</h4>
+          <div class="price my-3">
+            <span class="amount">{{ pkg.price | currency }}</span>
+            <span class="per">{{ "home.packages.per" | translate }}</span>
           </div>
+          <ul class="list-unstyled mb-4">
+            <li><i class="pi pi-clock"></i> {{ pkg.duration | translate }}</li>
+            <li><i class="pi pi-book"></i> {{ pkg.classes | translate }}</li>
+            <li>
+              <i class="pi pi-check-circle"></i> {{ pkg.perClass | translate }}
+            </li>
+          </ul>
+          <a
+            href="https://wa.me/201141401419"
+            target="_blank"
+            rel="noopener"
+            aria-label="Chat with Islamic Academy on WhatsApp"
+          >
+            <button dir="ltr" class="cta-btn">
+              <i class="pi pi-arrow-up-right"></i>
+              <span>{{ "home.packages.cta" | translate }}</span>
+            </button>
+          </a>
         </div>
+      </div>
       }
     </div>
   </div>
